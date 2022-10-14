@@ -111,6 +111,9 @@ nav ul li a{
 h4{
     color: #555;
     font-weight: normal;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 .col_4 p{
     font-size: 14px;
@@ -120,6 +123,9 @@ h4{
 }
 .col_4:hover{
     transform:  translateY(-5px);
+}
+.rating1{
+    margin-bottom: 8px;
 }
 
 /* offer section styling complit */
@@ -298,6 +304,7 @@ ul{
     .cart-info{
         display: none;
     }
+    
 }
 /* All Product Page */
 .row-2{
@@ -443,6 +450,12 @@ th:last-child{
     margin: auto;
     box-shadow:0 0 20px 0px rgba(0,0,0,0.1)  ;
     overflow: hidden;
+}
+.row .col-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
 }
 .form-container span{
     font-weight: bold;
