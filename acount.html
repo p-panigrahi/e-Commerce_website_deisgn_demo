@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>RedStore</title>
+</head>
+<body>
+        <div class="nav_section">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="./public/img/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul id="Menuitems">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Product</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Content</a></li>
+                        <li><a href="">Acount</a></li>
+                    </ul>
+                </nav>
+                <img src="./public/img/cart.png" alt="Cart-logo" width="30px" height="30px">
+                <img src="./public/img/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    <!-- account page -->
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="./public/img/image1.png" width="100%" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="Login()">Login</span>
+                            <span onclick="Ragister()">Ragister</span>
+                            <hr id="indicator">
+                        </div>
+                        <form action="" id="first-form">
+                            <input type="text" placeholder="username">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot Password</a>
+                        </form>
+                        <form action="" id="second-form">
+                            <input type="text" placeholder="username">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="password">
+                            <button type="submit" class="btn">Ragister</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="./public/img/play-store.png" alt="">
+                        <img src="./public/img/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="./public/img/logo-white.png" alt="">
+                    <p>Our Purpose is To Sustainably Make the Pleasure and Benefits of Sports Accessible to the Many</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Shopping Website </p>
+        </div>
+    </div>
+    <!-- js  -->
+    <script>
+        var Menuitems = document.getElementById("Menuitems");
+        Menuitems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(Menuitems.style.maxHeight == "0px"){
+                Menuitems.style.maxHeight = "200px"
+            }else{
+                Menuitems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+    <!-- js for toggle form -->
+    <script>
+        var Loginform = document.getElementById("first-form");
+        var Ragisterform = document.getElementById("second-form");
+        var indicator = document.getElementById("indicator");
+        function Ragister(){
+            Ragisterform.style.transform = "translateX(0px)";
+            Loginform.style.transform = "translateX(0px)";
+            indicator.style.transform = "translateX(100px)";
+        }
+        function Login(){
+            Ragisterform.style.transform = "translateX(300px)";
+            Loginform.style.transform = "translateX(300px)";
+            indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html> 
